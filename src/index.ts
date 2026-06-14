@@ -37,7 +37,7 @@ async function main() {
     return;
   }
 
-  console.log(`取得件数: ${properties.length} 件  (実質月額の安い順、¥/㎡が比較基準より有利な物件は★表示)`);
+  console.log(`取得件数: ${properties.length} 件  (築年数が新しい順。実質月額が比較基準以下の物件は★表示)`);
   console.log('');
 
   const SEP = '─'.repeat(115);
@@ -62,8 +62,7 @@ async function main() {
   for (const p of properties) {
     const station = (p.stations[0] ?? '').replace('東京メトロ東西線/', '');
     const isCheaperCost = p.effectiveCost <= CURRENT_PROPERTY.effectiveCost;
-    const isBetterPerSqm = p.effectiveCostPerSqm < CURRENT_PROPERTY.effectiveCostPerSqm;
-    const marker = isCheaperCost && isBetterPerSqm ? '★' : isCheaperCost ? '↓' : '';
+    const marker = isCheaperCost ? '★' : '';
 
     const depositLabel = `${p.deposit}/${p.keyMoney}`;
 
@@ -85,34 +84,30 @@ async function main() {
   }
 
   console.log(SEP);
-  console.log('★: 実質月額・¥/㎡ともに比較基準より有利  ↓: 実質月額のみ有利');
+  console.log('★: 実質月額が比較基準（58,200円）以下');
   console.log('');
   console.log('【実質月額 = 0.6×賃料 + 管理費】（家賃補助50%・課税20%計算済み）');
   console.log('');
 
-  // Better than current
-  const better = properties.filter(
-    (p) => p.effectiveCost <= CURRENT_PROPERTY.effectiveCost && p.effectiveCostPerSqm < CURRENT_PROPERTY.effectiveCostPerSqm
-  );
+  // Properties with effectiveCost <= current, sorted newest first (already sorted by scraper)
+  const affordable = properties.filter((p) => p.effectiveCost <= CURRENT_PROPERTY.effectiveCost);
 
-  if (better.length > 0) {
-    console.log(`━━━ 比較基準より有利な物件: ${better.length} 件 ━━━`);
-    for (const p of better) {
+  if (affordable.length > 0) {
+    console.log(`━━━ 実質月額が現在以下の築浅物件: ${affordable.length} 件（築年数が新しい順）━━━`);
+    for (const p of affordable) {
       const station = (p.stations[0] ?? '').replace('東京メトロ東西線/', '');
       const diffCost = CURRENT_PROPERTY.effectiveCost - p.effectiveCost;
-      const diffPerSqm = CURRENT_PROPERTY.effectiveCostPerSqm - p.effectiveCostPerSqm;
       console.log(`\n  📍 ${p.name}`);
       console.log(`     ${p.address}  ${station}`);
       console.log(`     ${p.layout} / ${p.area}㎡ / ${p.builtYear}`);
       console.log(`     賃料 ${fmt(p.rent)}円 + 管理費 ${p.management > 0 ? fmt(p.management) + '円' : 'なし'}`);
-      console.log(`     実質月額 ${fmt(p.effectiveCost)}円 (▼${fmt(diffCost)}円)  ¥/㎡ ${fmt(p.effectiveCostPerSqm)} (▼${fmt(diffPerSqm)})`);
+      console.log(`     実質月額 ${fmt(p.effectiveCost)}円 (▼${fmt(diffCost)}円)  ¥/㎡ ${p.effectiveCostPerSqm > 0 ? fmt(p.effectiveCostPerSqm) : '-'}`);
       console.log(`     敷金 ${p.deposit} / 礼金 ${p.keyMoney}`);
       console.log(`     ${p.url}`);
     }
     console.log('');
   } else {
-    console.log('比較基準より実質コストと¥/㎡の両方が有利な物件は見つかりませんでした。');
-    console.log('(実質月額のみ有利な物件は ↓ マーク付きです)');
+    console.log('実質月額が現在以下の物件は見つかりませんでした。');
     console.log('');
   }
 }

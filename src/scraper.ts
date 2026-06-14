@@ -25,8 +25,8 @@ export async function scrapeProperties(): Promise<Property[]> {
       return true;
     });
 
-    // Sort by effectiveCost ascending
-    unique.sort((a, b) => a.effectiveCost - b.effectiveCost);
+    // Sort by builtYearNum descending (newest first), then effectiveCost ascending
+    unique.sort((a, b) => b.builtYearNum - a.builtYearNum || a.effectiveCost - b.effectiveCost);
     return unique;
   } finally {
     await browser.close();
