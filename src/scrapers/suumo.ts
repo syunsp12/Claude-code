@@ -2,10 +2,11 @@ import { BrowserContext, Page } from '@playwright/test';
 import { Property, calcEffectiveCost, parseRent, parseArea } from '../types';
 
 // 東京メトロ東西線 賃貸 1K/1R, 10万円以下, 築10年以内, 50件/page
-// ra=013: 東京都, rn=0025: 東西線, cb/ct: 賃料, md=01/02: 1R/1K, cn=10: 築10年以内
+// ra=013: 東京都, ra=012: 千葉県（浦安・妙典等）, rn=0025: 東西線
+// cb/ct: 賃料, md=01/02: 1R/1K, cn=10: 築10年以内
 const SUUMO_BASE =
   'https://suumo.jp/jj/chintai/ichiran/FR301FC001/' +
-  '?ar=030&bs=040&ra=013&rn=0025&cb=0.0&ct=10.0&md=01&md=02&cn=10&pc=50';
+  '?ar=030&bs=040&ra=013&ra=012&rn=0025&cb=0.0&ct=10.0&md=01&md=02&cn=10&pc=50';
 
 const CURRENT_YEAR = 2026;
 
