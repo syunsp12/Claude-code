@@ -1,17 +1,19 @@
 export interface Property {
+  source: 'SUUMO' | 'HOMES';
   name: string;
   address: string;
   stations: string[];
   layout: string;
-  area: number;         // m²
-  rent: number;         // 円
-  management: number;   // 円
+  area: number;           // m²
+  rent: number;           // 円
+  management: number;     // 円
   deposit: string;
   keyMoney: string;
-  builtYear: string;    // 築年月
-  structure: string;    // 構造
+  builtYear: string;      // "2020年3月" 等
+  builtYearNum: number;   // 2020 等 (ソート用)
+  structure: string;      // RC, SRC 等
   floor: string;
-  effectiveCost: number;     // 0.6 × rent + management
+  effectiveCost: number;      // 0.6×rent + management
   effectiveCostPerSqm: number; // effectiveCost / area
   url: string;
 }
@@ -25,3 +27,29 @@ export const CURRENT_PROPERTY = {
   effectiveCost: 58200,
   effectiveCostPerSqm: 2123,
 };
+
+export function calcEffectiveCost(rent: number, management: number): number {
+  // 補助：賃料の50%、上限5万、課税20%
+  // 賃料10万以下: 実質 = 0.6 × 賃料 + 管理費
+  const subsidy = Math.min(rent * 0.5, 50000);
+  const afterTaxSubsidy = subsidy * 0.8;
+  return Math.round(rent - afterTaxSubsidy + management);
+}
+
+export function parseRent(text: string): number {
+  const wan = text.match(/([\d.]+)\s*万/);
+  if (wan) return Math.round(parseFloat(wan[1]) * 10000);
+  const yen = text.match(/([\d,]+)\s*円/);
+  if (yen) return parseInt(yen[1].replace(/,/g, ''), 10);
+  return 0;
+}
+
+export function parseArea(text: string): number {
+  const m = text.match(/([\d.]+)\s*m/);
+  return m ? parseFloat(m[1]) : 0;
+}
+
+export function parseBuiltYear(text: string): number {
+  const m = text.match(/(\d{4})\s*年/);
+  return m ? parseInt(m[1], 10) : 0;
+}
