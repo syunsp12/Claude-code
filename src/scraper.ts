@@ -1,6 +1,7 @@
 import { chromium } from '@playwright/test';
-import { Property } from './types';
+import { Property, CURRENT_PROPERTY } from './types';
 import { scrapeSuumo } from './scrapers/suumo';
+import { verifyProperties } from './verify';
 
 export async function scrapeProperties(): Promise<Property[]> {
   const browser = await chromium.launch({
@@ -27,6 +28,14 @@ export async function scrapeProperties(): Promise<Property[]> {
 
     // Sort by builtYearNum descending (newest first), then effectiveCost ascending
     unique.sort((a, b) => b.builtYearNum - a.builtYearNum || a.effectiveCost - b.effectiveCost);
+
+    // 実質月額が比較基準以下の候補のみ、詳細ページで募集状況を検証する
+    const candidates = unique.filter((p) => p.effectiveCost <= CURRENT_PROPERTY.effectiveCost);
+    console.log(
+      `\n募集状況を検証中（実質月額 ${CURRENT_PROPERTY.effectiveCost.toLocaleString('ja-JP')}円以下の候補 ${candidates.length} 件の詳細ページを確認）...`
+    );
+    await verifyProperties(context, candidates);
+
     return unique;
   } finally {
     await browser.close();

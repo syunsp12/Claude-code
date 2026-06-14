@@ -16,6 +16,11 @@ export interface Property {
   effectiveCost: number;      // 0.6×rent + management
   effectiveCostPerSqm: number; // effectiveCost / area
   url: string;
+  // 募集状況（詳細ページ検証で付与）
+  available?: boolean;        // 募集中か（ページ生存＆未終了＆更新日が有効）
+  infoUpdated?: string;       // 情報更新日 "2026/06/13"
+  nextUpdate?: string;        // 次回更新予定日 "2026/06/21"
+  verifyNote?: string;        // 判定理由
 }
 
 export const CURRENT_PROPERTY = {
