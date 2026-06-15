@@ -1,5 +1,6 @@
 const { chromium } = require('/opt/node22/lib/node_modules/playwright');
 const fs = require('fs');
+const { initDb, upsertProperty, insertSession, insertRooms } = require('./db');
 
 function parseRent(rentStr) {
   if (!rentStr) return null;
@@ -238,7 +239,39 @@ async function scrapeStation(context, label, stationUrl) {
 
   fs.writeFileSync('/home/user/Claude-code/urayasu-comparison.json', JSON.stringify({
     stations: { kasai: kasaiUnits, nishikasai: nishiUnits, urayasu: urayasuUnits },
-    stats: { kasai: sKasai, nishikasai: sNishi, urayasu: sUrayasu, before: sBefore, after: sAfter }
+    stats: { kasai: sKasai, nishikasai: sNishi, urayasu: sAfter }
   }, null, 2));
   console.log('\n結果を urayasu-comparison.json に保存しました。');
+
+  // ===== DB保存 =====
+  const db = initDb();
+  const stationData = [
+    { key: 'kasai',      label: '葛西駅',   items: kasai      },
+    { key: 'nishikasai', label: '西葛西駅', items: nishikasai },
+    { key: 'urayasu',    label: '浦安駅',   items: urayasu    },
+  ];
+  for (const { key, label, items } of stationData) {
+    const totalRooms = items.reduce((n, p) => n + (p.rooms?.length || 0), 0);
+    const sessionId = insertSession(db, {
+      search_area:     key,
+      search_madori:   '1R,1K,1LDK',
+      search_max_rent: 120000,
+      source:          'SUUMO',
+      result_count:    totalRooms,
+    });
+    for (const item of items) {
+      if (!item.name || !item.rooms?.length) continue;
+      const pid = upsertProperty(db, {
+        name:        item.name,
+        address:     item.address,
+        station_info: item.allStation || item.nearest,
+        ageText:     item.ageText,
+        source:      'SUUMO',
+      });
+      insertRooms(db, pid, sessionId, item.rooms);
+    }
+    console.log(`[DB保存] ${label}: session#${sessionId}`);
+  }
+  db.close();
+  console.log('DBへの保存完了。');
 })();

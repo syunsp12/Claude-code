@@ -1,5 +1,6 @@
 const { chromium } = require('/opt/node22/lib/node_modules/playwright');
 const fs = require('fs');
+const { initDb, upsertProperty, insertSession, insertRooms } = require('./db');
 
 // ===== 検索設定 =====
 const CONFIG = {
@@ -467,4 +468,28 @@ function analyzeMarket(allFiltered) {
     JSON.stringify(analysis, null, 2));
 
   console.log('\n結果を kasai-results.json / kasai-analysis.json に保存しました。');
+
+  // ===== DB保存 =====
+  const db = initDb();
+  const totalRooms = allResults.suumo.reduce((n, p) => n + (p.rooms?.length || 0), 0);
+  const sessionId = insertSession(db, {
+    search_area:     'kasai+nishikasai',
+    search_madori:   '1R,1K,1LDK',
+    search_max_rent: CONFIG.maxRentYen,
+    source:          'SUUMO',
+    result_count:    totalRooms,
+  });
+  for (const item of allResults.suumo) {
+    if (!item.name || !item.rooms?.length) continue;
+    const pid = upsertProperty(db, {
+      name:        item.name,
+      address:     item.address,
+      station_info: item.allStation || item.nearest,
+      ageText:     item.ageText,
+      source:      'SUUMO',
+    });
+    insertRooms(db, pid, sessionId, item.rooms);
+  }
+  db.close();
+  console.log(`[DB保存] kasai+nishikasai: session#${sessionId} (${totalRooms}件)`);
 })();
