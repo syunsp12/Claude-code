@@ -1,0 +1,6 @@
+# スクレイピングした物件写真（一時調査ファイル、リポジトリに含めない）
+*-photos/
+residence10-photos/
+
+# Node
+node_modules/
