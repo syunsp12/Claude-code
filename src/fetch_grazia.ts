@@ -3,21 +3,45 @@ import { chromium } from '@playwright/test';
 async function main() {
   const browser = await chromium.launch({
     headless: true,
-    args: ['--ignore-certificate-errors', '--no-sandbox'],
+    args: [
+      '--ignore-certificate-errors',
+      '--no-sandbox',
+      '--disable-web-security',
+      '--disable-features=IsolateOrigins,site-per-process',
+      '--disable-blink-features=AutomationControlled',
+      '--disable-dev-shm-usage',
+      '--no-first-run',
+      '--no-default-browser-check',
+    ],
   });
   const context = await browser.newContext({
-    userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-    viewport: { width: 1280, height: 900 },
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+    viewport: { width: 1366, height: 768 },
     ignoreHTTPSErrors: true,
+    locale: 'ja-JP',
+    timezoneId: 'Asia/Tokyo',
+    extraHTTPHeaders: {
+      'Accept-Language': 'ja-JP,ja;q=0.9,en-US;q=0.8',
+      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+      'Accept-Encoding': 'gzip, deflate, br',
+      'Cache-Control': 'no-cache',
+      'Pragma': 'no-cache',
+    },
   });
+
+  // Bot検出回避
+  await context.addInitScript(() => {
+    Object.defineProperty(navigator, 'webdriver', { get: () => false });
+  });
+
   const page = await context.newPage();
 
-  const url = 'https://www.homes.co.jp/chintai/room/fbd6aa5bdc7febaa3b78782bf4f7b34c510b20bb/?referral_content=expired_rich_same_building';
-  // トップページ経由でアクセスしBotブロック回避
-  await page.goto('https://www.homes.co.jp/', { waitUntil: 'domcontentloaded', timeout: 20000 });
-  await page.waitForTimeout(1000);
-  await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
-  await page.waitForTimeout(2500);
+  const url = 'https://www.homes.co.jp/chintai/room/fbd6aa5bdc7febaa3b78782bf4f7b34c510b20bb/';
+  console.log('アクセス中:', url);
+
+  const resp = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 });
+  console.log('HTTP Status:', resp?.status());
+  await page.waitForTimeout(3000);
 
   // スクリーンショット
   await page.screenshot({
