@@ -1,0 +1,928 @@
+{
+  "suumo": [
+    {
+      "name": "グランヴィスタ四ツ谷",
+      "address": "東京都新宿区若葉１",
+      "nearest": "東京メトロ丸ノ内線/四谷三丁目駅 歩5分",
+      "age": "築11年 2階建",
+      "rooms": [
+        {
+          "floor": "2階",
+          "madori": "1LDK",
+          "menseki": "42m2",
+          "rent": "17万円",
+          "kanri": "7000円"
+        }
+      ]
+    },
+    {
+      "name": "ルクレ高田馬場",
+      "address": "東京都新宿区高田馬場３",
+      "nearest": "ＪＲ山手線/高田馬場駅 歩5分",
+      "age": "築7年 地下1地上5階建",
+      "rooms": [
+        {
+          "floor": "1階",
+          "madori": "1LDK",
+          "menseki": "30.04m2",
+          "rent": "16.2万円",
+          "kanri": "15000円"
+        },
+        {
+          "floor": "1階",
+          "madori": "1LDK",
+          "menseki": "30.04m2",
+          "rent": "16.7万円",
+          "kanri": "15000円"
+        },
+        {
+          "floor": "2階",
+          "madori": "1K",
+          "menseki": "30.38m2",
+          "rent": "16.9万円",
+          "kanri": "15000円"
+        },
+        {
+          "floor": "3階",
+          "madori": "1LDK",
+          "menseki": "31.99m2",
+          "rent": "17.3万円",
+          "kanri": "15000円"
+        },
+        {
+          "floor": "5階",
+          "madori": "1LDK",
+          "menseki": "34.62m2",
+          "rent": "18.4万円",
+          "kanri": "15000円"
+        }
+      ]
+    },
+    {
+      "name": "都営大江戸線 落合南長崎駅 4階建 新築",
+      "address": "東京都新宿区西落合１",
+      "nearest": "都営大江戸線/落合南長崎駅 歩4分",
+      "age": "新築 4階建",
+      "rooms": [
+        {
+          "floor": "1階",
+          "madori": "1LDK",
+          "menseki": "31.45m2",
+          "rent": "14.1万円",
+          "kanri": "10000円"
+        },
+        {
+          "floor": "B1階",
+          "madori": "1LDK",
+          "menseki": "27.26m2",
+          "rent": "13.5万円",
+          "kanri": "20000円"
+        },
+        {
+          "floor": "1階",
+          "madori": "1LDK",
+          "menseki": "30.02m2",
+          "rent": "13.9万円",
+          "kanri": "20000円"
+        },
+        {
+          "floor": "1階",
+          "madori": "1LDK",
+          "menseki": "30.02m2",
+          "rent": "13.9万円",
+          "kanri": "20000円"
+        },
+        {
+          "floor": "2階",
+          "madori": "1LDK",
+          "menseki": "30.02m2",
+          "rent": "14.5万円",
+          "kanri": "20000円"
+        },
+        {
+          "floor": "2階",
+          "madori": "1LDK",
+          "menseki": "30.6m2",
+          "rent": "14.6万円",
+          "kanri": "20000円"
+        },
+        {
+          "floor": "1階",
+          "madori": "1LDK",
+          "menseki": "30.02m2",
+          "rent": "14.6万円",
+          "kanri": "20000円"
+        },
+        {
+          "floor": "2階",
+          "madori": "1LDK",
+          "menseki": "31.45m2",
+          "rent": "14.7万円",
+          "kanri": "20000円"
+        },
+        {
+          "floor": "2階",
+          "madori": "1LDK",
+          "menseki": "30.02m2",
+          "rent": "14.7万円",
+          "kanri": "20000円"
+        },
+        {
+          "floor": "3階",
+          "madori": "1LDK",
+          "menseki": "30.02m2",
+          "rent": "14.7万円",
+          "kanri": "20000円"
+        },
+        {
+          "floor": "3階",
+          "madori": "1LDK",
+          "menseki": "30.6m2",
+          "rent": "14.8万円",
+          "kanri": "20000円"
+        },
+        {
+          "floor": "2階",
+          "madori": "1LDK",
+          "menseki": "30.02m2",
+          "rent": "14.8万円",
+          "kanri": "20000円"
+        },
+        {
+          "floor": "4階",
+          "madori": "1LDK",
+          "menseki": "30.02m2",
+          "rent": "14.8万円",
+          "kanri": "20000円"
+        },
+        {
+          "floor": "3階",
+          "madori": "1LDK",
+          "menseki": "30.02m2",
+          "rent": "14.8万円",
+          "kanri": "20000円"
+        },
+        {
+          "floor": "2階",
+          "madori": "1LDK",
+          "menseki": "31.45m2",
+          "rent": "14.9万円",
+          "kanri": "20000円"
+        },
+        {
+          "floor": "4階",
+          "madori": "1LDK",
+          "menseki": "30.02m2",
+          "rent": "14.9万円",
+          "kanri": "20000円"
+        }
+      ]
+    },
+    {
+      "name": "GM上落合",
+      "address": "東京都新宿区上落合３",
+      "nearest": "東京メトロ東西線/落合駅 歩4分",
+      "age": "築1年 地下1地上4階建",
+      "rooms": [
+        {
+          "floor": "1階",
+          "madori": "1K",
+          "menseki": "20.03m2",
+          "rent": "10.4万円",
+          "kanri": "5000円"
+        },
+        {
+          "floor": "2階",
+          "madori": "1LDK",
+          "menseki": "31.89m2",
+          "rent": "14.4万円",
+          "kanri": "5000円"
+        }
+      ]
+    },
+    {
+      "name": "クロスレジデンス高田馬場",
+      "address": "東京都新宿区西早稲田３",
+      "nearest": "東京メトロ東西線/高田馬場駅 歩6分",
+      "age": "築3年 14階建",
+      "rooms": [
+        {
+          "floor": "4階",
+          "madori": "1K",
+          "menseki": "26.54m2",
+          "rent": "13.8万円",
+          "kanri": "12000円"
+        },
+        {
+          "floor": "11階",
+          "madori": "1K",
+          "menseki": "27.25m2",
+          "rent": "14.5万円",
+          "kanri": "12000円"
+        },
+        {
+          "floor": "5階",
+          "madori": "1LDK",
+          "menseki": "32.4m2",
+          "rent": "16.3万円",
+          "kanri": "12000円"
+        },
+        {
+          "floor": "2階",
+          "madori": "1LDK",
+          "menseki": "40.26m2",
+          "rent": "18万円",
+          "kanri": "12000円"
+        },
+        {
+          "floor": "5階",
+          "madori": "1LDK",
+          "menseki": "32.4m2",
+          "rent": "18万円",
+          "kanri": "12000円"
+        },
+        {
+          "floor": "7階",
+          "madori": "1LDK",
+          "menseki": "40.26m2",
+          "rent": "18.5万円",
+          "kanri": "12000円"
+        },
+        {
+          "floor": "2階",
+          "madori": "1LDK",
+          "menseki": "42.35m2",
+          "rent": "18.7万円",
+          "kanri": "12000円"
+        },
+        {
+          "floor": "9階",
+          "madori": "1LDK",
+          "menseki": "40.26m2",
+          "rent": "18.7万円",
+          "kanri": "12000円"
+        },
+        {
+          "floor": "2階",
+          "madori": "1LDK",
+          "menseki": "40.26m2",
+          "rent": "18.7万円",
+          "kanri": "12000円"
+        },
+        {
+          "floor": "2階",
+          "madori": "1LDK",
+          "menseki": "40.06m2",
+          "rent": "18.8万円",
+          "kanri": "12000円"
+        },
+        {
+          "floor": "9階",
+          "madori": "1LDK",
+          "menseki": "40.26m2",
+          "rent": "19.5万円",
+          "kanri": "12000円"
+        },
+        {
+          "floor": "2階",
+          "madori": "1LDK",
+          "menseki": "42.35m2",
+          "rent": "20.7万円",
+          "kanri": "12000円"
+        },
+        {
+          "floor": "12階",
+          "madori": "1LDK",
+          "menseki": "44.76m2",
+          "rent": "22.6万円",
+          "kanri": "12000円"
+        }
+      ]
+    },
+    {
+      "name": "コスモヒルズ",
+      "address": "東京都新宿区高田馬場３",
+      "nearest": "ＪＲ山手線/高田馬場駅 歩4分",
+      "age": "築4年 5階建",
+      "rooms": [
+        {
+          "floor": "4階",
+          "madori": "1LDK",
+          "menseki": "36.85m2",
+          "rent": "16.2万円",
+          "kanri": "8000円"
+        },
+        {
+          "floor": "4階",
+          "madori": "1LDK",
+          "menseki": "36.85m2",
+          "rent": "17.82万円",
+          "kanri": "8800円"
+        }
+      ]
+    },
+    {
+      "name": "カゼッタスッド",
+      "address": "東京都新宿区上落合１",
+      "nearest": "東京メトロ東西線/落合駅 歩6分",
+      "age": "築2年 2階建",
+      "rooms": [
+        {
+          "floor": "2階",
+          "madori": "1LDK",
+          "menseki": "42.23m2",
+          "rent": "15万円",
+          "kanri": "3000円"
+        }
+      ]
+    },
+    {
+      "name": "イプセ神楽坂",
+      "address": "東京都新宿区矢来町",
+      "nearest": "東京メトロ東西線/神楽坂駅 歩5分",
+      "age": "築3年 4階建",
+      "rooms": [
+        {
+          "floor": "1階",
+          "madori": "1LDK",
+          "menseki": "43.42m2",
+          "rent": "20.5万円",
+          "kanri": "15000円"
+        }
+      ]
+    },
+    {
+      "name": "ＪＲ総武線 大久保駅 8階建 築4年",
+      "address": "東京都新宿区北新宿１",
+      "nearest": "ＪＲ総武線/大久保駅 歩9分",
+      "age": "築4年 8階建",
+      "rooms": [
+        {
+          "floor": "7階",
+          "madori": "1LDK",
+          "menseki": "43.19m2",
+          "rent": "20.9万円",
+          "kanri": "15000円"
+        }
+      ]
+    },
+    {
+      "name": "GRAN　PASEO市谷仲之町",
+      "address": "東京都新宿区市谷仲之町",
+      "nearest": "都営新宿線/曙橋駅 歩5分",
+      "age": "築3年 4階建",
+      "rooms": [
+        {
+          "floor": "1階",
+          "madori": "1K",
+          "menseki": "27.2m2",
+          "rent": "13.5万円",
+          "kanri": "15000円"
+        },
+        {
+          "floor": "1階",
+          "madori": "1K",
+          "menseki": "27.2m2",
+          "rent": "14万円",
+          "kanri": "15000円"
+        },
+        {
+          "floor": "1階",
+          "madori": "1K",
+          "menseki": "27.2m2",
+          "rent": "14.5万円",
+          "kanri": "15000円"
+        },
+        {
+          "floor": "3階",
+          "madori": "1LDK",
+          "menseki": "34.41m2",
+          "rent": "19.8万円",
+          "kanri": "12000円"
+        },
+        {
+          "floor": "3階",
+          "madori": "1LDK",
+          "menseki": "35.86m2",
+          "rent": "21.3万円",
+          "kanri": "15000円"
+        }
+      ]
+    },
+    {
+      "name": "ＪＲ総武線 東中野駅 5階建 築10年",
+      "address": "東京都新宿区北新宿４",
+      "nearest": "ＪＲ総武線/東中野駅 歩5分",
+      "age": "築10年 5階建",
+      "rooms": [
+        {
+          "floor": "5階",
+          "madori": "1LDK",
+          "menseki": "41.3m2",
+          "rent": "15万円",
+          "kanri": "-"
+        },
+        {
+          "floor": "5階",
+          "madori": "1LDK",
+          "menseki": "41.3m2",
+          "rent": "15万円",
+          "kanri": "10000円"
+        },
+        {
+          "floor": "5階",
+          "madori": "1LDK",
+          "menseki": "41.3m2",
+          "rent": "16万円",
+          "kanri": "10000円"
+        }
+      ]
+    },
+    {
+      "name": "パークタワー西新宿エムズポート",
+      "address": "東京都新宿区西新宿８",
+      "nearest": "東京メトロ丸ノ内線/西新宿駅 歩4分",
+      "age": "築13年 地下2地上27階建",
+      "rooms": [
+        {
+          "floor": "3階",
+          "madori": "1LDK",
+          "menseki": "42.58m2",
+          "rent": "21万円",
+          "kanri": "15000円"
+        },
+        {
+          "floor": "7階",
+          "madori": "1SLDK",
+          "menseki": "52.89m2",
+          "rent": "29万円",
+          "kanri": "10000円"
+        }
+      ]
+    },
+    {
+      "name": "ガーデンコートアネックス",
+      "address": "東京都新宿区上落合２",
+      "nearest": "東京メトロ東西線/落合駅 歩3分",
+      "age": "築12年 2階建",
+      "rooms": [
+        {
+          "floor": "2階",
+          "madori": "1LDK",
+          "menseki": "41.77m2",
+          "rent": "18.2万円",
+          "kanri": "-"
+        }
+      ]
+    },
+    {
+      "name": "西武新宿線 中井駅 3階建 築12年",
+      "address": "東京都新宿区上落合２",
+      "nearest": "西武新宿線/中井駅 歩3分",
+      "age": "築12年 3階建",
+      "rooms": [
+        {
+          "floor": "2階",
+          "madori": "1LDK",
+          "menseki": "41.77m2",
+          "rent": "18.2万円",
+          "kanri": "-"
+        }
+      ]
+    },
+    {
+      "name": "都営大江戸線 牛込神楽坂駅 3階建 築15年",
+      "address": "東京都新宿区中町",
+      "nearest": "都営大江戸線/牛込神楽坂駅 歩4分",
+      "age": "築15年 3階建",
+      "rooms": [
+        {
+          "floor": "2階",
+          "madori": "1LDK",
+          "menseki": "51.04m2",
+          "rent": "20万円",
+          "kanri": "4000円"
+        }
+      ]
+    },
+    {
+      "name": "ZOOM新宿御苑前",
+      "address": "東京都新宿区新宿１",
+      "nearest": "東京メトロ丸ノ内線/新宿御苑前駅 歩7分",
+      "age": "築2年 15階建",
+      "rooms": [
+        {
+          "floor": "6階",
+          "madori": "1LDK",
+          "menseki": "30.67m2",
+          "rent": "16.5万円",
+          "kanri": "15000円"
+        },
+        {
+          "floor": "6階",
+          "madori": "1LDK",
+          "menseki": "31.82m2",
+          "rent": "16.7万円",
+          "kanri": "15000円"
+        },
+        {
+          "floor": "14階",
+          "madori": "1LDK",
+          "menseki": "30.67m2",
+          "rent": "19.9万円",
+          "kanri": "20000円"
+        },
+        {
+          "floor": "13階",
+          "madori": "1LDK",
+          "menseki": "31.82m2",
+          "rent": "20.5万円",
+          "kanri": "20000円"
+        }
+      ]
+    },
+    {
+      "name": "東京メトロ丸ノ内線 西新宿駅 14階建 築1年",
+      "address": "東京都新宿区西新宿８",
+      "nearest": "東京メトロ丸ノ内線/西新宿駅 歩5分",
+      "age": "築1年 14階建",
+      "rooms": [
+        {
+          "floor": "4階",
+          "madori": "1LDK",
+          "menseki": "45.03m2",
+          "rent": "24.8万円",
+          "kanri": "10000円"
+        },
+        {
+          "floor": "13階",
+          "madori": "1LDK",
+          "menseki": "50.34m2",
+          "rent": "27.5万円",
+          "kanri": "10000円"
+        }
+      ]
+    },
+    {
+      "name": "ベラス・ウィータ",
+      "address": "東京都新宿区高田馬場１",
+      "nearest": "ＪＲ山手線/高田馬場駅 歩6分",
+      "age": "築11年 5階建",
+      "rooms": [
+        {
+          "floor": "2階",
+          "madori": "1K",
+          "menseki": "25.69m2",
+          "rent": "13.9万円",
+          "kanri": "-"
+        },
+        {
+          "floor": "3階",
+          "madori": "1K",
+          "menseki": "25.69m2",
+          "rent": "14.1万円",
+          "kanri": "-"
+        },
+        {
+          "floor": "3階",
+          "madori": "1K",
+          "menseki": "25.69m2",
+          "rent": "14.1万円",
+          "kanri": "-"
+        },
+        {
+          "floor": "4階",
+          "madori": "1K",
+          "menseki": "25.69m2",
+          "rent": "14.3万円",
+          "kanri": "-"
+        },
+        {
+          "floor": "4階",
+          "madori": "1K",
+          "menseki": "25.69m2",
+          "rent": "14.3万円",
+          "kanri": "-"
+        },
+        {
+          "floor": "3階",
+          "madori": "1K",
+          "menseki": "25.69m2",
+          "rent": "14.3万円",
+          "kanri": "-"
+        },
+        {
+          "floor": "4階",
+          "madori": "1LDK",
+          "menseki": "51.38m2",
+          "rent": "24万円",
+          "kanri": "-"
+        },
+        {
+          "floor": "4階",
+          "madori": "1LDK",
+          "menseki": "51.38m2",
+          "rent": "24万円",
+          "kanri": "-"
+        },
+        {
+          "floor": "4階",
+          "madori": "1LDK",
+          "menseki": "51.38m2",
+          "rent": "24万円",
+          "kanri": "-"
+        },
+        {
+          "floor": "4階",
+          "madori": "1LDK",
+          "menseki": "51.38m2",
+          "rent": "24万円",
+          "kanri": "-"
+        },
+        {
+          "floor": "2階",
+          "madori": "1LDK",
+          "menseki": "51.38m2",
+          "rent": "24万円",
+          "kanri": "-"
+        }
+      ]
+    },
+    {
+      "name": "ベルティーセ新宿",
+      "address": "東京都新宿区西新宿７",
+      "nearest": "ＪＲ中央線/大久保駅 歩3分",
+      "age": "築7年 9階建",
+      "rooms": [
+        {
+          "floor": "6階",
+          "madori": "1LDK",
+          "menseki": "46.42m2",
+          "rent": "19.5万円",
+          "kanri": "10000円"
+        },
+        {
+          "floor": "6階",
+          "madori": "1LDK",
+          "menseki": "46.42m2",
+          "rent": "20.5万円",
+          "kanri": "10000円"
+        }
+      ]
+    },
+    {
+      "name": "パークアクシス神楽坂ステージ",
+      "address": "東京都新宿区水道町",
+      "nearest": "東京メトロ有楽町線/江戸川橋駅 歩5分",
+      "age": "築22年 8階建",
+      "rooms": [
+        {
+          "floor": "4階",
+          "madori": "1K",
+          "menseki": "34.67m2",
+          "rent": "14.6万円",
+          "kanri": "8000円"
+        },
+        {
+          "floor": "4階",
+          "madori": "1K",
+          "menseki": "34.67m2",
+          "rent": "14.9万円",
+          "kanri": "8000円"
+        },
+        {
+          "floor": "3階",
+          "madori": "1LDK",
+          "menseki": "44.44m2",
+          "rent": "18.9万円",
+          "kanri": "10000円"
+        },
+        {
+          "floor": "6階",
+          "madori": "1LDK",
+          "menseki": "40.18m2",
+          "rent": "18.9万円",
+          "kanri": "10000円"
+        },
+        {
+          "floor": "3階",
+          "madori": "1LDK",
+          "menseki": "44.44m2",
+          "rent": "19.4万円",
+          "kanri": "10000円"
+        },
+        {
+          "floor": "5階",
+          "madori": "1LDK",
+          "menseki": "44.44m2",
+          "rent": "19.5万円",
+          "kanri": "10000円"
+        },
+        {
+          "floor": "5階",
+          "madori": "1LDK",
+          "menseki": "44.44m2",
+          "rent": "19.5万円",
+          "kanri": "15000円"
+        },
+        {
+          "floor": "3階",
+          "madori": "1LDK",
+          "menseki": "44.44m2",
+          "rent": "20.9万円",
+          "kanri": "10000円"
+        },
+        {
+          "floor": "5階",
+          "madori": "1LDK",
+          "menseki": "44.44m2",
+          "rent": "21.1万円",
+          "kanri": "10000円"
+        }
+      ]
+    }
+  ],
+  "homes": [
+    {
+      "name": "賃貸マンションGL　BellaLuna",
+      "address": "東京都品川区西大井6丁目3-14",
+      "transport": "",
+      "floor": "1階101即入居可",
+      "rent": "10.1万円",
+      "madori": "1K",
+      "menseki": "20.79m²"
+    },
+    {
+      "name": "賃貸マンションkeiji竹ノ塚",
+      "address": "東京都足立区伊興3丁目",
+      "transport": "",
+      "floor": "4階",
+      "rent": "7.5万円",
+      "madori": "1K",
+      "menseki": "22.01m²"
+    },
+    {
+      "name": "賃貸マンションＶａｌｌｏｎ　Ｅ",
+      "address": "東京都八王子市明神町3丁目",
+      "transport": "",
+      "floor": "1階102",
+      "rent": "7.6万円",
+      "madori": "1K",
+      "menseki": "26.08m²"
+    },
+    {
+      "name": "賃貸アパートグランコート高尾町II",
+      "address": "東京都八王子市高尾町",
+      "transport": "",
+      "floor": "1階",
+      "rent": "6.7万円",
+      "madori": "1K",
+      "menseki": "26.84m²"
+    },
+    {
+      "name": "賃貸アパートグランコート高尾町II",
+      "address": "東京都八王子市高尾町",
+      "transport": "",
+      "floor": "1階101",
+      "rent": "6.7万円",
+      "madori": "1K",
+      "menseki": "26.84m²"
+    },
+    {
+      "name": "賃貸アパートグランコート高尾町II",
+      "address": "東京都八王子市高尾町",
+      "transport": "",
+      "floor": "1階103",
+      "rent": "6.6万円",
+      "madori": "1K",
+      "menseki": "26.84m²"
+    },
+    {
+      "name": "賃貸アパートグランコート高尾町II",
+      "address": "東京都八王子市高尾町",
+      "transport": "",
+      "floor": "1階102",
+      "rent": "6.6万円",
+      "madori": "1K",
+      "menseki": "26.84m²"
+    },
+    {
+      "name": "賃貸アパートグランコート高尾町II",
+      "address": "東京都八王子市高尾町",
+      "transport": "",
+      "floor": "1階",
+      "rent": "6.6万円",
+      "madori": "1K",
+      "menseki": "26.84m²"
+    },
+    {
+      "name": "賃貸マンションCourtyard Asakusa",
+      "address": "東京都台東区今戸2丁目",
+      "transport": "",
+      "floor": "7階702即入居可",
+      "rent": "8.5万円",
+      "madori": "1K",
+      "menseki": "25.22m²"
+    },
+    {
+      "name": "賃貸マンションCourtyard Asakusa",
+      "address": "東京都台東区今戸2丁目",
+      "transport": "",
+      "floor": "4階即入居可",
+      "rent": "12.7万円",
+      "madori": "1LDK",
+      "menseki": "40.1m²"
+    },
+    {
+      "name": "賃貸マンションCourtyard Asakusa",
+      "address": "東京都台東区今戸2丁目",
+      "transport": "",
+      "floor": "4階即入居可",
+      "rent": "8.5万円",
+      "madori": "1K",
+      "menseki": "25.16m²"
+    },
+    {
+      "name": "賃貸アパートグランプラム本町（ＧｒａｎＰｌｕｍ本町）",
+      "address": "東京都武蔵村山市本町2丁目",
+      "transport": "",
+      "floor": "1階",
+      "rent": "8万円",
+      "madori": "1LDK",
+      "menseki": "42.15m²"
+    },
+    {
+      "name": "賃貸アパートグランプラム本町（ＧｒａｎＰｌｕｍ本町）",
+      "address": "東京都武蔵村山市本町2丁目",
+      "transport": "",
+      "floor": "1階103",
+      "rent": "8万円",
+      "madori": "1LDK",
+      "menseki": "42.15m²"
+    },
+    {
+      "name": "賃貸アパートグランコート高尾町",
+      "address": "東京都八王子市高尾町",
+      "transport": "",
+      "floor": "1階101即入居可",
+      "rent": "6.9万円",
+      "madori": "ワンルーム30.39m²",
+      "menseki": ""
+    },
+    {
+      "name": "賃貸アパートＭＱｕａｒｔｏ拝島I",
+      "address": "東京都昭島市緑町5丁目",
+      "transport": "",
+      "floor": "3階",
+      "rent": "7万円",
+      "madori": "1K",
+      "menseki": "24.84m²"
+    },
+    {
+      "name": "賃貸アパートＭＱｕａｒｔｏ拝島I",
+      "address": "東京都昭島市緑町5丁目",
+      "transport": "",
+      "floor": "1日前UP3階303",
+      "rent": "7万円",
+      "madori": "1K",
+      "menseki": "26.2m²"
+    },
+    {
+      "name": "賃貸アパートＭＱｕａｒｔｏ拝島I",
+      "address": "東京都昭島市緑町5丁目",
+      "transport": "",
+      "floor": "3階303",
+      "rent": "7万円",
+      "madori": "1K",
+      "menseki": "24.84m²"
+    },
+    {
+      "name": "賃貸マンションプラトリエ西八王子",
+      "address": "東京都八王子市追分町",
+      "transport": "",
+      "floor": "11階1105",
+      "rent": "8.2万円",
+      "madori": "1K",
+      "menseki": "25.5m²"
+    },
+    {
+      "name": "賃貸マンションプラトリエ西八王子",
+      "address": "東京都八王子市追分町",
+      "transport": "",
+      "floor": "11階1103",
+      "rent": "8.2万円",
+      "madori": "1K",
+      "menseki": "25.5m²"
+    },
+    {
+      "name": "賃貸マンションプラトリエ西八王子",
+      "address": "東京都八王子市追分町",
+      "transport": "",
+      "floor": "11階1104",
+      "rent": "8.1万円",
+      "madori": "1K",
+      "menseki": "25.5m²"
+    }
+  ],
+  "athome": "CAPTCHA保護のためスキップ"
+}
